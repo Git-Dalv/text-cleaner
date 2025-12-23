@@ -113,33 +113,33 @@ class TextCleaner:
     INVISIBLE_CHARS = set(
         chr(i) for i in range(32) if chr(i) not in '\t\n\r'
     ) | {
-        '\u200c',    # Zero-width non-joiner
-        '\u200d',    # Zero-width joiner
-        '\u2060',    # Word joiner
-        '\u2063',    # Invisible separator
-        '\u2064',    # Invisible plus
-        '\ufffe',    # Invalid Unicode
-        '\uffff',    # Invalid Unicode
-        '\ufffd',    # Replacement character
-    }
+                          '\u200c',    # Zero-width non-joiner
+                          '\u200d',    # Zero-width joiner
+                          '\u2060',    # Word joiner
+                          '\u2063',    # Invisible separator
+                          '\u2064',    # Invisible plus
+                          '\ufffe',    # Invalid Unicode
+                          '\uffff',    # Invalid Unicode
+                          '\ufffd',    # Replacement character
+                      }
 
     # ===========================================
     # Initialization
     # ===========================================
 
     def __init__(
-        self,
-        remove_quotes: bool = True,
-        normalize_dashes: bool = True,
-        normalize_spaces: bool = True,
-        remove_html_tags: bool = True,
-        decode_html_entities: bool = True,
-        remove_invisible: bool = True,
-        preserve_newlines: bool = False,
-        lowercase: bool = False,
-        max_length: Optional[int] = None,
-        allowed_chars: Optional[str] = None,
-        extra_remove: Optional[str] = None,
+            self,
+            remove_quotes: bool = True,
+            normalize_dashes: bool = True,
+            normalize_spaces: bool = True,
+            remove_html_tags: bool = True,
+            decode_html_entities: bool = True,
+            remove_invisible: bool = True,
+            preserve_newlines: bool = False,
+            lowercase: bool = False,
+            max_length: Optional[int] = None,
+            allowed_chars: Optional[str] = None,
+            extra_remove: Optional[str] = None,
     ):
         """
         Initialize TextCleaner with options.

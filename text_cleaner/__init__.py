@@ -1,4 +1,4 @@
-from .text_cleaner import (
+from text_cleaner.cleaner import (
     TextCleaner,
     clean,
     clean_multiline,
